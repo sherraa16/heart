@@ -1,0 +1,63 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.sherraa{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: rotate(45deg);
+    animation-name: sherraa;
+    animation-duration: .2s;
+    animation-iteration-count: infinite ;
+
+    
+}
+@keyframes sherraa{
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    50%{
+        width: 200px;
+        height: 200px;
+
+    }
+    100%{
+        width: 400px;
+
+    }
+}
+.sherraa::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.sherraa::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+}
